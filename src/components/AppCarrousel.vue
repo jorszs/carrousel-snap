@@ -19,26 +19,24 @@ const list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 <!-- v-scroll="handleScroll" -->
 <template>
-  <div class="AppCarrousel flex items-center snap-mandatory snap-x">
-    <div class="item snap-start" v-for="i in list" :key="i">
-      <div class="w-[400px]">{{ i }}</div>
+  <div
+    class="
+      w-full
+      h-[200px]
+      overflow-scroll
+      flex
+      items-center
+      snap-mandatory snap-x
+    "
+  >
+    <div
+      class="w-full h-[100px] rounded-2xl bg-rose-600 mx-4 snap-start"
+      v-for="i in list"
+      :key="i"
+    >
+      <div class="w-[400px]"></div>
     </div>
   </div>
 </template>
 
-<style scoped>
-.AppCarrousel {
-  width: 100%;
-  height: 200px;
-  /* background-color: #fff; */
-  overflow: scroll;
-  /* scroll-snap-type: x mandatory; */
-}
-.item {
-  /* width: 300px; */
-  height: 100px;
-  margin: 0 15px;
-  border-radius: 12px;
-  background-color: #f00;
-}
-</style>
+<style scoped></style>
